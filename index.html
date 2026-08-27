@@ -5,97 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Bryant Sunday | Official Website</title>
-  .profile-picture {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
 
- 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #ffffff;
       line-height: 1.6;
     }
 
-    header {
-      min-height: 75vh;
+    a {
+      color: inherit;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(180deg, #151515, #0b0b0b);
+      background:
+        radial-gradient(circle at top, #252525 0%, #080808 55%);
     }
 
-    header h1 {
-      font-size: clamp(42px, 10vw, 75px);
-      letter-spacing: 3px;
-      margin-bottom: 12px;
+    .hero-content {
+      max-width: 700px;
     }
 
-    header p {
-      color: #bdbdbd;
-      font-size: 20px;
+    .profile-picture {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 25px;
+      border: 3px solid #ffffff;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 10vw, 78px);
+      letter-spacing: 5px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .tagline {
+      color: #aaaaaa;
+      font-size: 19px;
     }
 
     .bio {
-      margin-top: 18px;
       color: #78e08f;
-      font-size: 18px;
+      font-size: 20px;
+      margin-top: 12px;
     }
 
+    .hero-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* SECTIONS */
     section {
       max-width: 850px;
       margin: auto;
-      padding: 65px 20px;
+      padding: 75px 20px;
       text-align: center;
     }
 
-    h2 {
-      font-size: 32px;
+    section h2 {
+      font-size: 34px;
       margin-bottom: 25px;
     }
 
-    .release {
-      background: #171717;
-      border: 1px solid #292929;
-      border-radius: 20px;
-      padding: 35px 20px;
-      max-width: 550px;
+    .about-text {
+      max-width: 650px;
       margin: auto;
+      color: #cccccc;
+      font-size: 17px;
+    }
+
+    /* MUSIC */
+    .release {
+      max-width: 520px;
+      margin: auto;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 22px;
+      padding: 35px 22px;
     }
 
     .release h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-bottom: 8px;
     }
 
     .release p {
-      color: #aaa;
+      color: #999999;
       margin-bottom: 25px;
     }
 
-    .button {
+    .listen-button {
       display: inline-block;
-      background: white;
-      color: black;
+      padding: 13px 25px;
+      background: #ffffff;
+      color: #000000;
       text-decoration: none;
-      padding: 13px 24px;
       border-radius: 30px;
       font-weight: bold;
-      transition: 0.2s;
     }
 
-    .button:hover {
-      transform: scale(1.05);
+    /* FUTURE RELEASES */
+    .future {
+      color: #999999;
+      border: 1px dashed #333333;
+      border-radius: 18px;
+      padding: 30px 20px;
     }
 
+    /* SOCIALS */
     .socials {
       display: flex;
       justify-content: center;
@@ -104,112 +150,168 @@
     }
 
     .socials a {
-      color: white;
       text-decoration: none;
-      border: 1px solid #444;
-      padding: 12px 20px;
+      border: 1px solid #444444;
+      padding: 12px 22px;
       border-radius: 30px;
+      transition: 0.2s;
     }
 
     .socials a:hover {
-      background: white;
-      color: black;
+      background: #ffffff;
+      color: #000000;
     }
 
-    .future {
-      color: #999;
-      background: #121212;
-      border-radius: 18px;
-      padding: 30px 20px;
-    }
-
+    /* FOOTER */
     footer {
-      border-top: 1px solid #292929;
+      border-top: 1px solid #222222;
       text-align: center;
-      padding: 30px 20px;
-      color: #777;
+      padding: 35px 20px;
+      color: #666666;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        letter-spacing: 3px;
+      }
+
+      .profile-picture {
+        width: 145px;
+        height: 145px;
+      }
+
+      section {
+        padding: 55px 20px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div>
-      <img src="file_00000000778471f48069597cf591366a.png" alt="Profile picture" class="profile-picture">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+
+      <img
+        src="file_00000000778471f48069597cf591366a.png"
+        alt="Bryant Sunday profile picture"
+        class="profile-picture"
+      >
+
       <h1>BRYANT SUNDAY</h1>
-      <p>Official Artist Website</p>
+
+      <p class="tagline">Official Artist Website</p>
+
       <p class="bio">Just a weirdo 💚</p>
+
+      <a href="#music" class="hero-button">
+        Explore My Music
+      </a>
+
     </div>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <p class="about-text">
       Welcome to the official website of Bryant Sunday.
-      Discover my music, latest releases and future updates here.
+      This is my space for music, new releases, updates and everything
+      happening in my world as an artist.
     </p>
+
   </section>
 
-  <section>
+
+  <!-- MUSIC -->
+  <section id="music">
+
     <h2>Latest Release 🎵</h2>
 
     <div class="release">
-      <h3>LOVE & MONEY</h3>
+
+      <h3>LOVE &amp; MONEY</h3>
+
       <p>My latest song</p>
 
       <a
-        class="button"
+        class="listen-button"
         href="https://audiomack.com/bryantsunday/song/broken?share-user-id=226143537"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         Listen on Audiomack
       </a>
+
     </div>
+
   </section>
 
+
+  <!-- FUTURE RELEASES -->
   <section>
-    <h2>More Music</h2>
+
+    <h2>New Releases</h2>
 
     <div class="future">
+
       <p>
-        New releases will be added here as they come out.
+        New music will be added here whenever I release it.
       </p>
+
     </div>
+
   </section>
 
+
+  <!-- SOCIAL MEDIA -->
   <section>
-    <h2>Follow Bryant Sunday</h2>
+
+    <h2>Follow Me</h2>
 
     <div class="socials">
 
       <a
         href="https://www.tiktok.com/@bryantsunday"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         TikTok
       </a>
 
       <a
         href="https://www.instagram.com/brya.ntsunday/"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         Instagram
       </a>
 
       <a
         href="https://audiomack.com/bryantsunday"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         Audiomack
       </a>
 
     </div>
+
   </section>
 
+
+  <!-- FOOTER -->
   <footer>
-    © 2026 Bryant Sunday. All rights reserved.
+
+    © 2026 Bryant Sunday · Official Website
+
   </footer>
 
 </body>
-    </html>
+        </html>    
